@@ -130,12 +130,13 @@ kl-16642:Planets ferreira$ pwd
 /Users/ferreira/Desktop/Planets
 kl-16642:Planets ferreira$ ls
 car	moons
-kl-16642:Planets ferreira$ nano mars.txt
+kl-16642:Planets ferreira$ git diff
+
 
   GNU nano 2.0.6          File: mars.txt                  Modified  
 
 Cold and dry, but everything is my favorite color
-
+xxx nao percebo nada disto
 
 
 
@@ -164,3 +165,4 @@ Cold and dry, but everything is my favorite color
 
 ^G Get Help^O WriteOut^R Read Fil^Y Prev Pag^K Cut Text^C Cur Pos
 ^X Exit    ^J Justify ^W Where Is^V Next Pag^U UnCut Te^T To Spell
+
