@@ -1,0 +1,166 @@
+Last login: Tue Apr  2 09:57:10 on console
+kl-16642:~ ferreira$ ~/Desktop
+-bash: /Users/ferreira/Desktop: is a directory
+kl-16642:~ ferreira$ ls
+BaKoMa.DDE.TW0x1c45ec0		BaKoMa.DDE.TW33908992
+BaKoMa.DDE.TW0x1c528c0		BaKoMa.DDE.TW50693056
+BaKoMa.DDE.TW0x1c59a80		Desktop
+BaKoMa.DDE.TW0x1e0aee0		Documents
+BaKoMa.DDE.TW0x7fe351c6e430	Downloads
+BaKoMa.DDE.TW0x7ff447e68f90	Dropbox
+BaKoMa.DDE.TW28430144		Dropbox (KAUST)
+BaKoMa.DDE.TW28607760		Dropbox (Personal)
+BaKoMa.DDE.TW28613568		Library
+BaKoMa.DDE.TW29666896		Movies
+BaKoMa.DDE.TW30697280		Music
+BaKoMa.DDE.TW31659392		Pictures
+BaKoMa.DDE.TW31809104		Public
+BaKoMa.DDE.TW32767376		bin
+BaKoMa.DDE.TW32888624
+kl-16642:~ ferreira$ cd Desktop/
+kl-16642:Desktop ferreira$ git config --global user.name "Rita Ferreira"
+kl-16642:Desktop ferreira$ git config --global user.email "rita.ferreira@kaust.edu.sa"
+kl-16642:Desktop ferreira$ git config --global core.autocrlf input
+kl-16642:Desktop ferreira$ git config --global core.editor "nano -w"
+kl-16642:Desktop ferreira$ git config --list
+core.excludesfile=~/.gitignore
+core.legacyheaders=false
+core.quotepath=false
+mergetool.keepbackup=true
+push.default=simple
+color.ui=auto
+color.interactive=auto
+repack.usedeltabaseoffset=true
+alias.s=status
+alias.a=!git add . && git status
+alias.au=!git add -u . && git status
+alias.aa=!git add . && git add -u . && git status
+alias.c=commit
+alias.cm=commit -m
+alias.ca=commit --amend
+alias.ac=!git add . && git commit
+alias.acm=!git add . && git commit -m
+alias.l=log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+alias.ll=log --stat --abbrev-commit
+alias.lg=log --color --graph --pretty=format:'%C(bold white)%h%Creset -%C(bold green)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+alias.llg=log --color --graph --pretty=format:'%C(bold white)%H %d%Creset%n%s%n%+b%C(bold blue)%an <%ae>%Creset %C(bold green)%cr (%ci)' --abbrev-commit
+alias.d=diff
+alias.master=checkout master
+alias.spull=svn rebase
+alias.spush=svn dcommit
+alias.alias=!git config --list | grep 'alias\.' | sed 's/alias\.\([^=]*\)=\(.*\)/\1\	 => \2/' | sort
+include.path=~/.gitcinclude
+include.path=.githubconfig
+include.path=.gitcredential
+diff.exif.textconv=exif
+credential.helper=osxkeychain
+user.name=Rita Ferreira
+user.email=rita.ferreira@kaust.edu.sa
+core.autocrlf=input
+core.editor=nano -w
+kl-16642:Desktop ferreira$ git config --help
+kl-16642:Desktop ferreira$ mkdir planets
+kl-16642:Desktop ferreira$ cd planets/
+kl-16642:planets ferreira$ pwd
+/Users/ferreira/Desktop/planets
+kl-16642:planets ferreira$ git init
+Initialized empty Git repository in /Users/ferreira/Desktop/planets/.git/
+kl-16642:planets ferreira$ ls
+kl-16642:planets ferreira$ ls -a
+.	..	.git
+kl-16642:planets ferreira$ ls -aF
+./	../	.git/
+kl-16642:planets ferreira$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+kl-16642:planets ferreira$ cd ~\Desktop
+-bash: cd: ~Desktop: No such file or directory
+kl-16642:planets ferreira$ cd ferreira/Desktop
+-bash: cd: ferreira/Desktop: No such file or directory
+kl-16642:planets ferreira$ cd ~/Desktop
+kl-16642:Desktop ferreira$ cd planets
+kl-16642:planets ferreira$ ls -a
+.	..	.git
+kl-16642:planets ferreira$ mkdir moons
+kl-16642:planets ferreira$ cd moons
+kl-16642:moons ferreira$ git init
+Initialized empty Git repository in /Users/ferreira/Desktop/planets/moons/.git/
+kl-16642:moons ferreira$ ls -a
+.	..	.git
+kl-16642:moons ferreira$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+kl-16642:moons ferreira$ rm moons
+rm: moons: No such file or directory
+kl-16642:moons ferreira$ rm filename
+rm: filename: No such file or directory
+kl-16642:moons ferreira$ rm -rf moons/.git
+kl-16642:moons ferreira$ ls
+kl-16642:moons ferreira$ cd ~/Desktop/
+kl-16642:Desktop ferreira$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+kl-16642:Desktop ferreira$ cd Planets
+kl-16642:Planets ferreira$ ls
+moons
+kl-16642:Planets ferreira$ cd moons
+kl-16642:moons ferreira$ ls
+kl-16642:moons ferreira$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+kl-16642:moons ferreira$ cd ..
+kl-16642:Planets ferreira$ ls
+moons
+kl-16642:Planets ferreira$ ls -aF
+./	../	.git/	moons/
+kl-16642:Planets ferreira$ rm -rf moons/.git/
+kl-16642:Planets ferreira$ ls -aF
+./	../	.git/	moons/
+kl-16642:Planets ferreira$ ls -aF moons/
+./	../
+kl-16642:Planets ferreira$ pwd
+/Users/ferreira/Desktop/Planets
+kl-16642:Planets ferreira$ ls
+car	moons
+kl-16642:Planets ferreira$ nano mars.txt
+
+  GNU nano 2.0.6          File: mars.txt                  Modified  
+
+Cold and dry, but everything is my favorite color
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help^O WriteOut^R Read Fil^Y Prev Pag^K Cut Text^C Cur Pos
+^X Exit    ^J Justify ^W Where Is^V Next Pag^U UnCut Te^T To Spell
